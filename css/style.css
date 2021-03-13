@@ -1,0 +1,221 @@
+/* ****************************************
+                GENERAL
+***************************************** */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+html, body { 
+    margin:0;
+    padding:0;
+    width:100%;
+    height:100%;
+    overflow: auto;
+    }
+
+*{
+    padding: 0;
+    margin:0;
+    box-sizing:border-box;
+    font-family: 'Lato', sans-serif;
+    line-height:1.5rem;
+}
+
+a{
+    text-decoration:none;
+    color:black;
+}
+
+.white {
+    color:white;
+}
+
+.navy {
+    color:#041238;
+}
+
+h1 {
+    margin:1.5rem;
+    font-size:2.5rem;
+}
+
+
+/* ****************************************
+                HEADER
+***************************************** */
+header {
+    background: url('../img/bg.png');
+    background-repeat:no-reapeat;
+    background-position:bottom;
+    background-size:cover;
+    height:46rem;
+}
+
+.logo-container {
+    padding:1rem;
+}
+
+.logo {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.8rem;
+}
+
+.intro-text {
+    width:60%;
+    margin:0 auto;
+    text-align:center;
+    margin-top:3.5rem;
+}
+
+.intro-text p{
+    font-weight:300;
+    font-size:1rem;
+}
+
+input {
+    border-radius: 5rem;
+    width:60%;
+    box-shadow:none;
+    margin-top:1rem;
+    border:1px solid rgb(9, 9, 78);
+    padding:0.2rem 0 0.2rem 0.8rem;
+
+}
+
+input::placeholder {
+    font-size: 0.8rem;
+    padding:0.8rem;
+}
+
+input:focus {
+    box-shadow: 0 0 5px rgb(9, 9, 78);
+    border:none;
+}
+
+/* ****************************************
+               RECEIPES
+***************************************** */
+
+h2, small {
+    display:block;
+    text-align:center;
+    text-shadow:0 0 1px #041238;
+    margin-bottom:0.5rem;
+}
+
+h2 {
+    font-size:2rem;
+}
+
+small {
+    font-weight:300;
+    font-size:1rem;
+    padding-top:0.5rem;
+}
+
+select {
+    border: 1px solid #ccc;
+    border-radius: 3em;
+    padding: 0.3em 1em;
+    width: 50%;
+    background-position: 95%;
+    background-repeat: no-repeat;
+    width: 15em;
+    margin-top: 2em;
+}
+
+.layout-btn {
+ background-color: #FDD839;
+ color: #041238;
+ font-weight: bold;
+ padding: 0.8em 1.2em;
+ border: 0.063em solid #FDD839;
+ border-radius: 3em;
+ margin-top: 2em;
+ font-size:1rem;
+}
+
+.sort-container {
+    display: flex;
+    justify-content:space-between ;
+    padding: 0.5em 1.5em;
+}
+
+.receipes-container {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width:85%;
+    margin:5rem auto;
+    text-align: center;
+    vertical-align: baseline;
+    grid-gap:3rem;
+}
+
+/* .receipe:hover {
+    transform: scale(1.2);
+    border:1px solid orange;
+    border-radius:2rem;
+    padding:1em;
+} */
+
+.receipe{
+    margin-bottom:3rem;
+}
+
+h3 {
+    font-size: 1.1rem;
+    padding:0.2rem;
+}
+
+.ingredients {
+    font-size:1rem;
+    font-weight:300;
+    margin-bottom:1.5rem;
+}
+
+.recipe-btn {
+    background-color:orange;
+    font-size:1rem;
+    color:#041238;
+    font-weight:700;
+    padding: 0.7rem 1.1rem;
+    border-radius: 3rem;
+}
+
+.recipe-btn:hover{
+    background-color: #FDD839;
+}
+
+.food {
+    width:20rem;
+}
+
+
+/* ****************************************
+               FOOTER
+***************************************** */
+footer{
+    background-color:#FBD691;
+    padding:0.8rem;
+    text-align:center;
+    font-size:0.8rem;
+    font-weight:300;
+}
+
+/* ****************************************
+              MEDIA QUERIES
+***************************************** */
+@media screen and (max-width: 70em){
+    .receipes-container {
+        grid-template-columns: 1fr 1fr;
+        width:90%;
+    }
+}
+
+@media screen and (max-width: 46em){
+    .intro-text, input {
+        width:90%
+    }
+    .receipes-container {
+        display:block;
+    }
+}
